@@ -2,35 +2,16 @@
 
 buildscript {
     repositories {
-        jcenter()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+        mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.1'
-        classpath 'com.github.panpf.bintray-publish:bintray-publish:1.0.0'
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
-}
-
-allprojects {
-    repositories {
-        mavenLocal()
-        jcenter()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
-        maven { url 'https://jitpack.io' }
-    }
-    tasks.withType(Javadoc) {
-        enabled = false
+        classpath 'com.android.tools.build:gradle:7.2.2'
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+apply from : "https://gist.githubusercontent.com/SheTieJun/f4cb1bd33997c2b46d9e3df40b95a02e/raw/c7b65d18aabfeccc09c37e3b2e7964cdd1f8e856/subprojects.gradle"

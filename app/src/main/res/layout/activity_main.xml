@@ -10,7 +10,6 @@
     <ExpandableListView
         android:groupIndicator="@null"
         android:id="@+id/list"
-        android:childDivider="@drawable/qmui_divider"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

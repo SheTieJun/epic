@@ -1,1 +1,31 @@
+
+
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven { url "https://jitpack.io" }
+        mavenLocal()
+        mavenCentral()
+        google()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url "https://jitpack.io" }
+        mavenLocal()
+        google()
+        mavenCentral()
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/SheTieJun/maven/")
+            credentials {
+                username = "SheTieJun"
+                password = "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"
+            }
+        }
+    }
+}
+
 include ':app', ':library'
