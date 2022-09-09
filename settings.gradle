@@ -10,6 +10,10 @@ pluginManagement {
     }
 }
 
+Properties properties = new Properties()
+properties.load(file("local.properties").newDataInputStream())
+
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -18,11 +22,10 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
-            name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/SheTieJun/maven/")
             credentials {
                 username = "SheTieJun"
-                password = "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"
+                password = properties.getProperty("GITHUB_READ_TOKEN") ?: System.getenv("GITHUB_READ_TOKEN")
             }
         }
     }

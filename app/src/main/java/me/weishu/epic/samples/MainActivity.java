@@ -1,6 +1,7 @@
 package me.weishu.epic.samples;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,7 +37,7 @@ public class MainActivity extends Activity {
         allSuites = TestManager.getInstance().getAllSuites();
         ExpandableListAdapter adapter = new MyAdapter();
         listView.setAdapter(adapter);
-
+        findViewById(R.id.test_privacy).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, PrivacyActivity.class)));
     }
 
     private class MyAdapter extends BaseExpandableListAdapter {

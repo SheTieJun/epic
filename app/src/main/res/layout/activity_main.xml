@@ -7,6 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/test_privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="去测试隐私"/>
+
     <ExpandableListView
         android:groupIndicator="@null"
         android:id="@+id/list"

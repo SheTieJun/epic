@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/textview_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/check_package"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="软件安装列表读取检测（通过）"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/check_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DeviceId 检测(版本过高无法测试)"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/check_mac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MAC 检测（没有hook到很奇怪）"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/check_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="定位信息读取检测（通过）"
+                />
+        </com.google.android.material.chip.ChipGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
